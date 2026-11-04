@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Sensitive User Data & Credentials (CRITICAL: DO NOT COMMIT)
+config.json
+profiles/
+screenshots/
+*.log
+
+# Environment & IDE
+.env
+.venv/
+env/
+.vscode/
+.idea/
