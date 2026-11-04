@@ -25,11 +25,14 @@ from automation_engine import (
 
 CONFIG_PATH = os.path.join(BASE_DIR, "config.json")
 TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
+ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 os.makedirs(TEMPLATES_DIR, exist_ok=True)
 os.makedirs(SCREENSHOTS_DIR, exist_ok=True)
+os.makedirs(ASSETS_DIR, exist_ok=True)
 
 app = FastAPI(title="Google AI Pro (5 TB) 2-Year Zero Cost Automation Console")
 app.mount("/screenshots", StaticFiles(directory=SCREENSHOTS_DIR), name="screenshots")
+app.mount("/assets", StaticFiles(directory=ASSETS_DIR), name="assets")
 
 # Global runtime state
 LOGS: List[str] = [

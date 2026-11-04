@@ -1,133 +1,145 @@
-# 🚀 Google AI Pro Automation & CDP Engineering Console
-> **An educational research project and browser automation framework utilizing Playwright, Chrome DevTools Protocol (CDP), and FastAPI.**
+<div align="center">
 
-[![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Framework](https://img.shields.io/badge/Framework-FastAPI%20%7C%20Playwright-green.svg)](https://fastapi.tiangolo.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Interface](https://img.shields.io/badge/UI-Arabic%20%26%20English%20(Bilingual)-purple.svg)](#)
+<img src="assets/ai-for-arab-banner.jpg" alt="الذكاء الاصطناعي للعرب" width="220" style="border-radius: 20px; box-shadow: 0 8px 24px rgba(6, 182, 212, 0.4);" />
+
+# 🚀 وحدة الأتمتة الشاملة لاشتراك Google AI Pro (5 TB) مجاناً لسنتين
+### مشروع بحثي تعليمي مفتوح المصدر لهندسة أتمتة المتصفحات وبروتوكول Chrome CDP
+
+[![Telegram Channel](https://img.shields.io/badge/Telegram-الذكاء_الاصطناعي_للعرب_🏡⚡️-blue?logo=telegram&style=for-the-badge)](https://t.me/AI4Arabs)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![Playwright](https://img.shields.io/badge/Playwright-Automation-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 ---
 
-## ⚠️ Legal Disclaimer & Responsible Use Notice
-### إخلاء مسؤولية قانوني وتعليمي صارم
+### 📢 انضم إلى مجتمع الذكاء الاصطناعي للعرب 🏡⚡️
+> **تابع أحدث شروحات ونماذج وأدوات الذكاء الاصطناعي الحصرية عبر قناتنا على تيليجرام:**  
+> 🔗 **[https://t.me/AI4Arabs](https://t.me/AI4Arabs)**
+
+---
+
+</div>
+
+## ⚠️ إخلاء مسؤولية قانوني وتعليمي صارم (Legal & Ethical Disclaimer)
 
 > [!IMPORTANT]
-> **FOR EDUCATIONAL, ACADEMIC, AND RESEARCH PURPOSES ONLY**  
-> This repository is published strictly for technical research into **browser automation**, **Chrome DevTools Protocol (CDP)** orchestration, **client-side RPC payload inspection**, and **session proxy routing**.  
-> - **No Warranty:** The software is provided "AS-IS", without warranties of any kind, express or implied.
-> - **Compliance:** Users are solely responsible for ensuring their use of automation scripts complies with all applicable local laws, regulations, and third-party Terms of Service (including Google Terms of Service and Google Payments ToS).
-> - **No Promotion of Abuse:** The authors and contributors do not condone, promote, or take responsibility for any unauthorized circumvention of billing systems, account suspensions, or misuse of promotional tokens.
-> - **Experimental Research:** Cloud providers continuously patch and update promotional APIs and billing mechanisms; this tool serves as an architectural case study of modern web automation techniques.
+> **هذا المشروع منشور حصرياً للأغراض التعليمية، الأكاديمية، والبحثية في هندسة البرمجيات:**
+> 1. **الهدف البحثي:** دراسة وتحليل بروتوكول التحكم بالمتصفحات عن بُعد (`Chrome DevTools Protocol - CDP`)، وكيفية اعتراض حزم الـ RPC الشبكية (`Ngbm / eacquire`) محلياً عبر Playwright.
+> 2. **إخلاء المسؤولية التام:** المطورون والمساهمون غير مسؤولين عن أي استخدام غير قانوني أو سوء استخدام يخالف شروط خدمة أي جهة خارجية (بما في ذلك شروط خدمة Google أو Google Payments).
+> 3. **حماية الحسابات:** ينصح بشدة بعدم استخدام حساباتك الأساسية ذات الأهمية الشخصية أو الحساسة، بل الاعتماد على حسابات تجريبية فارغة (Burner Accounts) وبطاقات مسبقة الدفع لتجنب أي تعليق لحسابات الدفع.
 
 ---
 
-## 📌 Project Overview | نبذة عن المشروع
+## 🌟 مميزات المشروع | Key Features
 
-This project provides a full-stack, local web console demonstrating advanced browser automation workflows. It bridges a modern **FastAPI** management server with **Playwright** via Chrome's remote debugging protocol (`--remote-debugging-port`), orchestrating multi-step authentication, proxy tunnels, and real-time state telemetry.
-
-### Key Capabilities
-- **Bilingual Interface (العربية / English):** RTL-first modern dark UI built for ease of use, with LTR-isolated credential fields.
-- **CDP Session Isolation:** Each browser profile runs in its own sandboxed user directory (`--user-data-dir`) with WebRTC leak prevention.
-- **RFC 6238 TOTP Engine:** Zero-dependency, pure Python HMAC-SHA1 calculation for two-factor authentication secrets.
-- **Automated Proxy Tunnel Bridge:** Local HTTP proxy bridge supporting authentication rotation and residential IP endpoints.
-- **Real-time Live Stream Log:** Real-time log capture and verification screenshots displayed directly in the web dashboard.
+- **واجهة مستخدم عربية بالكامل:** لوحة تحكم عصرية داكنة بتصميم مستقبلي أنيق، مع دعم كامل للغة العربية (RTL) وعزل حقول البيانات التقنية (LTR).
+- **أتمتة شاملة بنقرة واحدة:** تنفيذ متكامل لخمس مراحل تشمل تسجيل الدخول، وتجاوز التحقق بخطوتين 2FA، ودمج العروض، ثم إلغاء التجديد التلقائي.
+- **توليد أكواد 2FA ذاتياً:** حساب أكواد التحقق (TOTP) ديناميكياً وفق معيار RFC 6238 دون الحاجة لأي تطبيق هاتف أو مكتبات معقدة.
+- **نفق بروكسي محلي ذكي:** دعم كامل للبروكسيات السكنية مع تدوير الجلسات تلقائياً لتفادي كشف الـ IP من أنظمة الحماية.
+- **حماية مادية صارمة ($0.00 Check):** السكريبت يمتنع نهائياً عن نقر زر الاشتراك إلا إذا كانت الفاتورة الظاهرة في نافذة Google هي **0.00 دولار تماماً**، لضمان عدم سحب أي أموال.
+- **أمان البيانات والخصوصية:** تم عزل كافة الملفات الحساسة (`config.json`، ملفات تعريف المتصفحات، لقطات الشاشة) عبر `.gitignore` لمنع رفعها أو تسريبها للعامة.
 
 ---
 
-## 🛠️ Architecture & Workflow | آلية العمل
+## 🛠️ كيف تعمل الأداة؟ (The 5-Step Pipeline)
 
 ```mermaid
 flowchart TD
-    User["المستخدم / Local User"] --> Dashboard["لوحة التحكم FastAPI (127.0.0.1:8765)<br/>templates/index.html"]
-    Dashboard --> Server["FastAPI Engine<br/>app.py"]
-    Server --> Engine["محرك الأتمتة Chrome CDP<br/>automation_engine.py"]
-    Engine --> Proxy["نفق البروكسي المحلي<br/>LocalHttpProxyAuthBridge"]
-    Proxy --> Browser["متصفح Google Chrome معزول<br/>profiles/profile_{id}"]
-    Browser --> TOTP["مولد أكواد 2FA المدمج<br/>RFC 6238 TOTP"]
-    Browser --> Interceptor["مراقب حزم الـ RPC والتجربة<br/>HOOK_JS & eacquire"]
+    A["المستخدم يضغط تشغيل<br/>لوحة التحكم http://127.0.0.1:8765"] --> B["الخطوة 1: تسجيل دخول آلي<br/>إدخال الباسورد وتخطي 2FA/Recovery"]
+    B --> C["الخطوة 2: ربط البطاقة بدون ضرائب<br/>تفعيل طبقة 12 شهر الأولى بـ $0.00"]
+    C --> D["الخطوة 3: دمج طبقة الـ 6 أشهر<br/>توكن Samsung S25 الترويجي ($0.00)"]
+    D --> E["الخطوة 4: دمج طبقة الـ 6 أشهر الأخيرة<br/>توكن Pixel الترويجي لقفل 24 شهراً"]
+    E --> F["الخطوة 5: إلغاء التجديد التلقائي<br/>الدخول لـ Google Play وقفل الاشتراك لسنتين مجاناً"]
 ```
 
-### The 5-Step Automation Pipeline
-1. **Step 1 · Authentication & 2FA:** Automated credential entry, recovery email confirmation, and dynamic TOTP 2FA code generation.
-2. **Step 2 · Layer 1 Subscription (12M):** Automated tax-exempt billing profile configuration and initial trial activation.
-3. **Step 3 · Layer 2 Stacking (+6M):** Extended duration consolidation using device promotion tokens.
-4. **Step 4 · Layer 3 Finalization (+6M):** Final 24-month duration stacking verified with zero-cost protection ($0.00).
-5. **Step 5 · Auto-Cancel & Lock:** Automated navigation to Google Play Subscriptions to terminate auto-renewal, locking the multi-year expiration while preventing recurring charges.
+---
+
+## 💻 متطلبات التشغيل السهل
+
+1. نظام تشغيل **Windows 10 أو 11**.
+2. متصفح **Google Chrome** مثبت على جهازك.
+3. بيئة **Python 3.10** أو أحدث (تأكد من تفعيل علامة `Add Python to PATH` أثناء التثبيت).
+4. اتصال مباشر أو بروكسي أمريكي معتمد على الرمز البريدي المعفي من الضرائب `97201`.
 
 ---
 
-## 💻 System Requirements | متطلبات التشغيل
+## 🚀 دليل التشغيل السريع في دقيقة واحدة (لغير التقنيين)
 
-- **Operating System:** Windows 10 or Windows 11 (64-bit).
-- **Google Chrome:** Installed in standard default location.
-- **Python:** Python 3.10 or newer (Ensure **"Add Python to PATH"** is checked during installation).
-- **Network:** Direct US network or US-based residential proxy (required for US$0.00 tax-exempt Oregon 97201 billing).
-
----
-
-## 🚀 Quick Start Guide | دليل التشغيل السريع
-
-### 1. First Time Setup (التشغيل لأول مرة)
-Double-click:
+### 1️⃣ التشغيل لأول مرة:
+انقر مرتين على الملف:
 ```bat
 1_install_dependencies_and_run.bat
 ```
-This batch script will automatically:
-- Install required Python packages (`fastapi`, `uvicorn`, `playwright`, `pydantic`).
-- Install Playwright's Chromium binaries.
-- Launch the web server and open the console at `http://127.0.0.1:8765`.
+- سيقوم الملف تلقائياً بتثبيت كافة المكتبات، وتحميل متصفح Chromium، ثم فتح لوحة التحكم في متصفحك تلقائياً على الرابط:  
+  👉 **`http://127.0.0.1:8765`**
 
-### 2. Regular Daily Run (الاستخدام المعتاد)
-Double-click:
+### 2️⃣ التشغيل اليومي المعتاد:
+في المرات القادمة، فقط انقر مرتين على:
 ```bat
 2_start_console.bat
 ```
 
 ---
 
-## 📋 Configuration & Usage | طريقة الإعداد والاستخدام
+## 📝 شرح الاستخدام خطوة بخطوة
 
-### 1. Payment Card Setup (إعداد بطاقة التحقق)
-- In the left panel **【إعدادات البطاقة والمنطقة المعفاة】**, enter a valid card (Visa / Mastercard) that allows international online transactions.
-- Keep the default tax-exempt postal code `97201` and state `OR` (Oregon).
-- Click **【💾 حفظ الإعدادات】**.
-> **Safety Guard:** The engine incorporates a strict $0.00 check; it will immediately abort execution if the checkout modal shows any charge greater than US$0.00.
+### الخطوة الأولى: إعداد البطاقة البنكية
+1. من لوحة التحكم في قسم **【إعدادات البطاقة البنكية】**، أدخل بيانات بطاقتك (Visa أو Mastercard):
+   - **رقم البطاقة:** 16 رقماً.
+   - **تاريخ الصلاحية:** الشهر والسنة (مثلاً 08 / 29).
+   - **رمز الأمان (CVC):** الـ 3 أرقام الموجودة خلف البطاقة.
+   - **اسم حامل البطاقة:** اسمك بالإنجليزية.
+2. اترك الرمز البريدي كما هو `97201` والولاية `OR` (وهي ولاية أوريغون الأمريكية المعفاة تماماً من الضرائب لضمان فاتورة $0.00).
+3. اضغط على **【💾 حفظ الإعدادات】**.
 
-### 2. Batch Account Import (استيراد الحسابات)
-Paste accounts in the right panel (one per line). Any standard delimiter (`----`, `/`, `|`, space) is supported:
+### الخطوة الثانية: إضافة حسابات Google
+في مربع **【استيراد الحسابات】** على اليمين، الصق حساباتك (حساب واحد في كل سطر)، بأي صيغة تفضلها:
 ```text
-email@gmail.com----Password----recovery@email.com
-email@gmail.com----Password----recovery@email.com----2FA_SECRET
-email@gmail.com----Password----2FA_SECRET
+الإيميل----كلمة_المرور----البريد_الاحتياطي
+الإيميل----كلمة_المرور----البريد_الاحتياطي----مفتاح_2FA
+الإيميل/كلمة_المرور/مفتاح_2FA
 ```
-Click **【➕ استيراد قائمة الحسابات】**, then click **【▶ تشغيل】** to begin automation.
+ثم اضغط على **【➕ استيراد قائمة الحسابات】**.
+
+### الخطوة الثالثة: بدء التشغيل التلقائي
+- لتشغيل حساب واحد: اضغط على زر **【▶ تشغيل】** بجانب الحساب.
+- لتشغيل كل الحسابات دفعة واحدة: اضغط على الزر الأخضر في الأعلى **【▶ تشغيل آلي شامل لكافة الحسابات】**.
+- ستشاهد في الأسفل شاشة السجلات المباشرة تعرض لك كل خطوة تنفذها الأداة بدقة حتى اكتمال السنتين بالكامل!
 
 ---
 
-## 🔒 Security Best Practices | نصائح وإرشادات الأمان
+## 🔒 إرشادات أمان مهمة جداً (Security Checklist)
 
-1. **Use Burner / Research Accounts:** Do not use primary personal or enterprise Google accounts containing mission-critical data.
-2. **Prepaid Virtual Cards:** Use virtual prepaid cards with minimal funds ($1 to $2) rather than primary debit/credit accounts.
-3. **Data Protection (`.gitignore`):** Sensitive credentials, profiles, screenshots, and `config.json` are strictly git-ignored and never committed to version control.
+- 🛡️ **استخدم حسابات تجريبية فقط:** لا تستخدم حسابك الشخصي الأساسي الحاوي على بيانات حساسة أو رسائل عمل مهمة.
+- 💳 **استخدم بطاقات مسبقة الدفع:** استخدم بطاقات افتراضية (Virtual Cards) مثل RedotPay أو Pyypl أو Wise يكون بها رصيد رمزي (1$ إلى 2$) لتمرير الفحص التجريبي المؤقت بدون قلق على أموالك.
+- 🔐 **بياناتك في أمان:** لا يتم إرسال أي بطاقة أو باسورد لأي خادم خارجي، وكل شيء يتم محلياً على جهازك بنسبة 100%.
 
 ---
 
-## 📂 Project Structure | هيكل المشروع
+## 📂 هيكل ملفات المشروع
 
 ```text
-├── 1_install_dependencies_and_run.bat   # Automated dependency installer & launcher
-├── 2_start_console.bat                  # Daily quick-start console launcher
-├── app.py                               # FastAPI backend & web API server
-├── automation_engine.py                 # Playwright CDP automation & RPC handler
-├── config.example.json                  # Clean sanitized configuration template
-├── requirements.txt                     # Python dependencies
-├── .gitignore                           # Strict exclusion of cards, profiles & cache
+├── 1_install_dependencies_and_run.bat   # ملف التثبيت التلقائي والتشغيل لأول مرة
+├── 2_start_console.bat                  # ملف التشغيل السريع المعتاد
+├── app.py                               # خادم FastAPI للوحة التحكم المحلية
+├── automation_engine.py                 # محرك الأتمتة المتقدم واعتراض حزم الـ RPC
+├── config.example.json                  # قالب نظيف للإعدادات خالي من أي بيانات شخصية
+├── requirements.txt                     # مكتبات بايثون المطلوبة
+├── .gitignore                           # ملف الحماية من تسريب البطاقات والملفات الحساسة
+├── assets/
+│   └── ai-for-arab-banner.jpg           # شعار مجتمع الذكاء الاصطناعي للعرب
 ├── templates/
-│   └── index.html                       # Modern bilingual RTL/LTR dashboard
-└── README.md                            # Documentation and architecture guide
+│   └── index.html                       # واجهة المستخدم العصرية الشاملة
+└── README.md                            # الدليل الشامل والمفصل
 ```
 
 ---
 
-## 📄 License
-This project is released under the [MIT License](LICENSE).
+<div align="center">
+
+### ⚡️ طور بحب وشغف ضمن مبادرة:  
+## [الذكاء الاصطناعي للعرب 🏡⚡️](https://t.me/AI4Arabs)
+**انضم إلينا وشارك المعرفة مع آلاف المطورين والمهتمين بالتقنية في الوطن العربي!**
+
+</div>
